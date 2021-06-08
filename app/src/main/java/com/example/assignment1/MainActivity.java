@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cpuDice, playerDice;
     private Button buttonLower, buttonHigher;
     private TextView textViewResult;
-    ImageView iv;
+    //ImageView iv;
     Random random = new Random();
     private int cpuRandom, playerRandom;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonLower = findViewById(R.id.button_lower);
         buttonHigher = findViewById(R.id.button_higher);
-        iv=findViewById(R.id.imageView);
+        //iv=findViewById(R.id.imageView);
 
         textViewResult = findViewById(R.id.text_view_result);
 
@@ -41,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 generateRandom();
                 if(cpuRandom < playerRandom){
-                    //textViewResult.setText("Computer Win!");
-                    iv.setImageResource(R.mipmap.win);
+                    textViewResult.setText("Computer Win!");
+                    //iv.setImageResource(R.mipmap.win);
                 }
                 else if(cpuRandom > playerRandom){
-                   // textViewResult.setText("Player Win!");
-                    iv.setImageResource(R.mipmap.image1);
+                   textViewResult.setText("Player Win!");
+                    //iv.setImageResource(R.mipmap.image1);
                 }
                 else {
-                   // textViewResult.setText("It's a Tie");
-                    iv.setImageResource(R.mipmap.tie);
+                   textViewResult.setText("It's a Tie");
+                   // iv.setImageResource(R.mipmap.tie);
                 }
             }
         });
@@ -60,16 +60,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 generateRandom();
                 if(cpuRandom > playerRandom){
-                   // textViewResult.setText("Computer Win!");
-                    iv.setImageResource(R.mipmap.win);
+                    textViewResult.setText("Computer Win!");
+                   // iv.setImageResource(R.mipmap.win);
                 }
                 else if(cpuRandom < playerRandom){
-                   // textViewResult.setText("Player Win!");
-                    iv.setImageResource(R.mipmap.image1);
+                    textViewResult.setText("Player Win!");
+                   // iv.setImageResource(R.mipmap.image1);
                 }
                 else {
-                   // textViewResult.setText("It's a Tie");
-                    iv.setImageResource(R.mipmap.tie);
+                    textViewResult.setText("It's a Tie");
+                   // iv.setImageResource(R.mipmap.tie);
                 }
             }
         });
